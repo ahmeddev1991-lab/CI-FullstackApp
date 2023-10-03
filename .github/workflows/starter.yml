@@ -32,12 +32,13 @@ jobs:
       - run: cd backend && npm ci
       - run: npm install formidable@v2
       - run: npm init @eslint/config
+      - run: npm cache clean --force
 
       # Run the tests.
       - run: cd backend && npm test
 
       # Run the linter.
-      #- run: cd backend && npm run lint
+      - run: cd backend && npm run lint
 
       # Send a console message at completion.
       - run: |
