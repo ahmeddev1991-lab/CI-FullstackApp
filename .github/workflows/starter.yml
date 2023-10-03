@@ -31,8 +31,8 @@ jobs:
       # Install the dependencies.
       - run: cd backend && npm ci
       - run: npm install formidable@v2
+      - run: npm install @eslint/eslintrc --save-dev
       - run: npm init @eslint/config
-      - run: npm cache clean --force
 
       # Run the tests.
       - run: cd backend && npm test
